@@ -1,0 +1,130 @@
+filetype off
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
+set nocompatible
+"colorscheme sweyla223602
+
+set modelines=0
+"set number
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set cursorline
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set laststatus=2
+set relativenumber
+set undofile
+
+set ignorecase
+set smartcase
+set incsearch
+set showmatch
+set hlsearch
+
+set scrolloff=3
+
+set virtualedit+=block
+
+set wrap
+set textwidth=85
+set formatoptions=qrn1
+set colorcolumn=+1
+
+set statusline=%f    " Path.
+set statusline+=%m   " Modified flag.
+set statusline+=%r   " Readonly flag.
+set statusline+=%w   " Preview window flag.
+
+set statusline+=\    " Space.
+
+set statusline+=%#redbar#                " Highlight the following as a warning.
+set statusline+=%{SyntasticStatuslineFlag()} " Syntastic errors.
+set statusline+=%*                           " Reset highlighting.
+
+set statusline+=%=   " Right align.
+
+" File format, encoding and type.  Ex: "(unix/utf-8/python)"
+set statusline+=(
+set statusline+=%{&ff}                        " Format (unix/DOS).
+set statusline+=/
+set statusline+=%{strlen(&fenc)?&fenc:&enc}   " Encoding (utf-8).
+set statusline+=/
+set statusline+=%{&ft}                        " Type (python).
+set statusline+=)
+
+" Line and column position and counts.
+set statusline+=\ (line\ %l\/%L,\ col\ %03c)
+
+
+set undodir=~/.vim/tmp/undo//     " undo files
+set backupdir=~/.vim/tmp/backup// " backups
+set directory=~/.vim/tmp/swap//   " swap files
+set backup                        " enable backups
+
+set list
+set lcs=tab:»·,trail:·
+
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap ; :
+"nnoremap <leader>a :Ack
+map <leader>a :Ack! 
+nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+noremap  <F2> :NERDTreeToggle<cr>
+inoremap <F2> <esc>:NERDTreeToggle<cr>
+
+nnoremap <leader>p :ConqueTermSplit bash<cr>
+
+nnoremap <leader>h :nohls<cr>
+
+nnoremap <leader>rw :%s/\s\+$//<cr>
+nnoremap <leader>rt :%s/	/    /g<cr>
+
+au Filetype nerdtree setlocal nolist
+
+let NERDTreeIgnore=['\~$', '.*\.pyc$']
+
+syntax on
+
+au FocusLost * :wa
+
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+"highlight Cursor guifg=NONE guibg=DarkGray ctermbg=DarkGray
+"highlight CursorLine  term=bold  guibg=LightGray  ctermbg=LightGray cterm=NONE
+"hi ColorColumn guibg=DarkGray
+nnoremap <F5> :GundoToggle<CR>
+
+set background=light
+colorscheme moria
+
+nnoremap <leader><F2> :NERDTreeFind<cr>

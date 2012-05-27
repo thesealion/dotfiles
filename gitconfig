@@ -1,0 +1,13 @@
+[user]
+        name = sealion
+        email = sealion@charadeyouare.org
+[color]
+        diff = auto
+        status = auto
+[alias]
+        st = status
+        br = branch
+        co = checkout
+        last = diff --stat=150,120 HEAD^ HEAD
+[core]
+        editor = vim
