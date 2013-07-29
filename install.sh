@@ -35,6 +35,7 @@ github_clone "scrooloose" "nerdtree"
 github_clone "scrooloose" "nerdcommenter"
 github_clone "scrooloose" "syntastic"
 github_clone "sjl" "gundo.vim"
+github_clone "tpope" "vim-fugitive"
 
 if [ ! -d "Command-T" ]; then
     github_clone "wincent" "Command-T"

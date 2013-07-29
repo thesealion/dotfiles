@@ -65,7 +65,7 @@ set statusline+=%{&ft}                        " Type (python).
 set statusline+=)
 
 " Line and column position and counts.
-set statusline+=\ (line\ %l\/%L,\ col\ %03c)
+set statusline+=\ (line\ %l\/%L,\ col\ %03v)
 
 
 set undodir=~/.vim/tmp/undo//     " undo files
@@ -76,21 +76,23 @@ set backup                        " enable backups
 set list
 set lcs=tab:»·,trail:·
 
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+"nnoremap <up> <nop>
+"nnoremap <down> <nop>
+"nnoremap <left> <nop>
+"nnoremap <right> <nop>
+"inoremap <up> <nop>
+"inoremap <down> <nop>
+"inoremap <left> <nop>
+"inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 nnoremap ; :
 "nnoremap <leader>a :Ack
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 map <leader>a :Ack! 
+map <leader>A :AckFromSearch!<cr>
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -107,6 +109,7 @@ nnoremap <leader>h :nohls<cr>
 
 nnoremap <leader>rw :%s/\s\+$//<cr>
 nnoremap <leader>rt :%s/	/    /g<cr>
+nnoremap <leader>g :Gblame<cr>
 
 au Filetype nerdtree setlocal nolist
 
@@ -123,6 +126,9 @@ set imsearch=0
 "highlight CursorLine  term=bold  guibg=LightGray  ctermbg=LightGray cterm=NONE
 "hi ColorColumn guibg=DarkGray
 nnoremap <F5> :GundoToggle<CR>
+
+let g:gitgutter_enabled = 0
+nnoremap <F6> :GitGutterToggle<CR>
 
 set background=light
 colorscheme moria
