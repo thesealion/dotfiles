@@ -4,6 +4,7 @@
 [color]
         diff = auto
         status = auto
+        ui = auto
 [alias]
         st = status
         br = branch
@@ -15,4 +16,4 @@
         editor = vim
         excludesfile = ~/.gitignore
 [advice]
-	statusHints = false
+        statusHints = false
