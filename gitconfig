@@ -9,5 +9,10 @@
         br = branch
         co = checkout
         last = diff --stat=150,120 HEAD^ HEAD
+        df = diff
+        dfc = diff --cached
 [core]
         editor = vim
+        excludesfile = ~/.gitignore
+[advice]
+	statusHints = false
