@@ -107,6 +107,7 @@ nnoremap <leader>h :nohls<cr>
 
 nnoremap <leader>rw :%s/\s\+$//<cr>
 nnoremap <leader>rt :%s/	/    /g<cr>
+nnoremap <leader>g :Gblame<cr>
 
 au Filetype nerdtree setlocal nolist
 
@@ -128,3 +129,4 @@ set background=light
 colorscheme moria
 
 nnoremap <leader><F2> :NERDTreeFind<cr>
+let NERDTreeDirArrows=0
