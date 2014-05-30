@@ -12,6 +12,7 @@
         last = diff --stat=150,120 HEAD^ HEAD
         df = diff
         dfc = diff --cached
+        amend = commit --amend --cleanup=whitespace
 [core]
         editor = vim
         excludesfile = ~/.gitignore

@@ -134,4 +134,10 @@ set background=light
 colorscheme moria
 
 nnoremap <leader><F2> :NERDTreeFind<cr>
+
 let NERDTreeDirArrows=0
+
+" autocmd BufRead,BufNewFile ~/workspace/project/* set tags=~/workspace/project/.ctags
+
+ab *** *args, **kwargs
+
