@@ -112,4 +112,6 @@ alias cfh="head -n1 | cut -c 8-14 | tr -d '\n' | xc"
 
 export PATH=~/.cabal/bin:$PATH
 
+if [ -f ~/.stuff.bash ]; then
 source ~/.stuff.bash
+fi

@@ -18,3 +18,5 @@
         excludesfile = ~/.gitignore
 [advice]
         statusHints = false
+[push]
+	default = simple

@@ -74,7 +74,7 @@ set directory=~/.vim/tmp/swap//   " swap files
 set backup                        " enable backups
 
 set list
-set lcs=tab:»·,trail:·
+set lcs=tab:»·,trail:·,nbsp:¬
 
 "nnoremap <up> <nop>
 "nnoremap <down> <nop>
@@ -115,6 +115,7 @@ au Filetype nerdtree setlocal nolist
 
 let NERDTreeIgnore=['\~$', '.*\.pyc$']
 
+filetype plugin on
 syntax on
 
 au FocusLost * :wa
@@ -130,8 +131,9 @@ nnoremap <F5> :GundoToggle<CR>
 let g:gitgutter_enabled = 0
 nnoremap <F6> :GitGutterToggle<CR>
 
-set background=light
-colorscheme moria
+set background=dark
+"colorscheme moria
+colorscheme molokai
 
 nnoremap <leader><F2> :NERDTreeFind<cr>
 
@@ -141,3 +143,4 @@ let NERDTreeDirArrows=0
 
 ab *** *args, **kwargs
 
+let g:syntastic_python_checkers = ['pyflakes']

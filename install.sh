@@ -9,7 +9,7 @@ function ensure_link {
 }
 
 function github_clone {
-    test -d $2 || git clone http://github.com/$1/$2.git
+    test -d $2 || git clone https://github.com/$1/$2.git
 }
 
 ensure_link "gitconfig" ".gitconfig"
@@ -36,6 +36,7 @@ github_clone "scrooloose" "nerdcommenter"
 github_clone "scrooloose" "syntastic"
 github_clone "sjl" "gundo.vim"
 github_clone "tpope" "vim-fugitive"
+github_clone "mileszs" "ack.vim"
 
 if [ ! -d "Command-T" ]; then
     github_clone "wincent" "Command-T"
